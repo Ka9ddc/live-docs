@@ -16,6 +16,7 @@ const Provider = ({children} : { children: ReactNode}) => {
   return (
     <LiveblocksProvider authEndpoint="/api/liveblocks-auth" resolveUsers={async ({ userIds}) => {
       const users = await getClerkUsers({ userIds });
+      console.log("Users provider: ", users);
 
       return users;
     }}

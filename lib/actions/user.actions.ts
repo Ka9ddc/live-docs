@@ -17,6 +17,8 @@ export const getClerkUsers = async ({ userIds }: { userIds: string[]}) => {
       avatar: user.imageUrl,
     }));
 
+    console.log(data);
+
     const sortedUsers = userIds.map((email) => users.find((user) => user.email === email));
 
     return parseStringify(sortedUsers);
